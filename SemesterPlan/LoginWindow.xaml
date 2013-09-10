@@ -1,0 +1,19 @@
+﻿<Window x:Class="SemesterPlan.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="185
+        " Width="285" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="0,20,0,0">
+            <StackPanel Height="30" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Brugernavn" Width="75" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtUserName" TextWrapping="Wrap" Text="&#xD;&#xA;" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20"/>
+            </StackPanel>
+            <StackPanel Height="30" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Kodeord" Width="75" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtPassword" TextWrapping="Wrap" Text="&#xD;&#xA;" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20"/>
+            </StackPanel>
+            <Button x:Name="btnLogin" Content="Log ind" HorizontalAlignment="Center" Margin="0,25,0,0" Click="btnLogin_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
