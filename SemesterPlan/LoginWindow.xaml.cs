@@ -20,13 +20,32 @@ namespace SemesterPlan
     /// </summary>
     public partial class LoginWindow : Window
     {
+        // Reference to the client object
+        private Client client;
+
+        /// <summary>
+        /// Login window constructor.
+        /// </summary>
         public LoginWindow()
         {
             InitializeComponent();
+
+            client = new Client(this);
+
+            txtUserName.Text = "";
+            txtPassword.Text = "";
         }
 
+        /// <summary>
+        /// Click event for the login button.
+        /// </summary>
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            string userName = txtUserName.Text;
+            string password = txtPassword.Text;
+
+            // Sends login request to the client object
+            client.AttemptLogin(userName, password);
         }
     }
 }
